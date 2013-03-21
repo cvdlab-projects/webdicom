@@ -1,0 +1,4 @@
+webdicom
+========
+
+Web DICOM project
