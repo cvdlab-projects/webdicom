@@ -73,15 +73,15 @@ Andrea Farruggio
 
 ### Image segmentation
 
--Preamble
--Case of study
--Theoretical analysis or practical (??)
+- Preamble
+- Case of study
+- Theoretical analysis or practical (??)
 
 ### Analysis of algorithms for block decomposition of images
 
--Study of block decomposition of images
--Study of different Algorithms
--Implementation of a specific Algorithm in Dycom
+- Study of block decomposition of images
+- Study of different Algorithms
+- Implementation of a specific Algorithm in Dycom
 
 - - -
 
