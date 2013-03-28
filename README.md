@@ -10,6 +10,9 @@ Web DICOM project
 * Roberta Romano
 * Serena Sforza
 * Valerio Cestarelli
+ 
+## Project Presentation Slides
+[Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/WebDicomPresentation.md#6)
 
 ## License
 
