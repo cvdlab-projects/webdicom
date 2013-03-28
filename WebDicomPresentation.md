@@ -50,16 +50,16 @@ Andrea Farruggio
 
 ## Group subdivision:
 ### Search and comparison of best available Dicom implementation in Python and Javascript
-  Serena Sforza
-  Fabio Mastromatteo
+- Serena Sforza
+- Fabio Mastromatteo
 
 ### Image Segmentation
-  Giovanni Pace
-  Andrea Farruggio
+- Giovanni Pace
+- Andrea Farruggio
 
 ### Analysis of algorithms for block decomposition of images
-  Roberta Romano
-  Valerio Cestarelli
+- Roberta Romano
+- Valerio Cestarelli
 
 
 - - -
