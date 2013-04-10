@@ -13,11 +13,25 @@
 - - -
 ## Search and comparison of best available Dicom implementation in Python and Javascript
 
-=To DO= Tasks Division
+- Dicom implementation in Python (Mastromatteo)
+ 1. PyDicom ::: Language, implementation, use complexity
+ 2. Grassroots Dicom ::: Language, implementation, use complexity
+ 3. Dicom SDL ::: Language, implementation, use complexity
+- Dicom implementation in Javascript (Sforza)
+ 1. jsDicom ::: Language, implementation, use complexity
+- Implementations comparison showcase (Sforza)
+ 1. Who is the better?
+ 2. Who is the worse?
+ 3. Why?
+- Final Conclusions about the implementations (Mastromatteo)
 
 ## Image segmentation
 
-=To DO= Tasks Division 
+- Preamble
+- Case of study
+- Theoretical and practical analysis of openCV implementation (PACE)  
+- Theoretical and practical analysis of mathlab implementation (FARRUGGIO)
+ 
 
 ## Analysis of algorithms for block decomposition of images
 
