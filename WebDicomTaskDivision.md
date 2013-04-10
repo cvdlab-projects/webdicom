@@ -2,7 +2,7 @@
 
 - - -
 
-# Project content:
+## Project content:
 
 - Search and comparison of best available Dicom implementation in Python and Javascript
 - Image segmentation
