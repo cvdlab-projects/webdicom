@@ -28,7 +28,7 @@ To reach this scope we thought to use open.cv module in C++, or reimplement an a
 
 Tasks Division
 
-- Roberta Romano half of implementation
+- Roberta Romano: half of implementation
 - Valerio Cestarelli half of implementation
 
 
