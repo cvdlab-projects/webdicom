@@ -14,6 +14,9 @@ Web DICOM project
 ## Project Presentation Slides
 [Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/WebDicomPresentation.md)
 
+## Project Tasks Division Slides
+[Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/WebDicomTaskDivision.md)
+
 ## License
 
 (The MIT License)
