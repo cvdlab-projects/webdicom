@@ -26,10 +26,10 @@ We could extrapolate the image from dicom object, segment it, and return a new d
 
 To reach this scope we thought to use open.cv module in C++, or reimplement an algorithm in C++ or Java. (What's the better?)
 
-Tasks Division
+--Tasks Division--
 
 - Roberta Romano: half of implementation
-- Valerio Cestarelli half of implementation
+- Valerio Cestarelli: half of implementation
 
 
 - - -
