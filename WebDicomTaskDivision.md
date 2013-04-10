@@ -20,9 +20,12 @@
 =To DO= Tasks Division 
 
 ## Analysis of algorithms for block decomposition of images
-Tasks division
-- Roberta Romano - half of implementation
-- Valerio Cestarelli - half of implementation
+- Roberta Romano half
+- Valerio Cestarelli half
+
+
+- Roberta Romano half of implementation
+- Valerio Cestarelli half of implementation
 
 We thought to take an algorithm for images' decomposition and apply it to a dicom object.
 We could extrapolate the image from dicom object, segment it, and return a new dicom object with segmented image.
