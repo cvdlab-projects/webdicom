@@ -20,9 +20,7 @@
 =To DO= Tasks Division 
 
 ## Analysis of algorithms for block decomposition of images
-- Roberta Romano half
-- Valerio Cestarelli half
-
+bla
 
 - Roberta Romano half of implementation
 - Valerio Cestarelli half of implementation
