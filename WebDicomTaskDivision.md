@@ -25,13 +25,16 @@
  3. Why?
 - Final Conclusions about the implementations (Mastromatteo)
 
+- - -
+
 ## Image segmentation
 
 - Preamble
 - Case of study
 - Theoretical and practical analysis of openCV implementation (PACE)  
 - Theoretical and practical analysis of matlab implementation (FARRUGGIO)
- 
+
+- - -
 
 ## Analysis of algorithms for block decomposition of images
 
