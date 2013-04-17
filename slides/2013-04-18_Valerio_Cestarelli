@@ -9,7 +9,9 @@
   - We've found an algorithm implemented in Java.
   - I'm going to modify and to readapt the algorithm to our purposes.
 
+
 *QuadTree Decomposition:*
+
 ![QuadTree](http://imageshack.us/a/img803/1708/biomedica0.jpg)
 - - -
 ##Solution:
@@ -31,6 +33,8 @@ Readaptation of the algorithm to our purposes, in particular:
 Other possibility:
 
   - Take adiacent pixels of same color density and put they in the same cell.
+
+![QuadTree](http://imageshack.us/a/img69/9959/biomedica3.png)
 - - -
 
 # The End
