@@ -18,8 +18,9 @@ Web DICOM project
 [Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-11.md)
 
 ## Task Specifications
-[Valerio Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Valerio_Cestarelli)
-[Roberta Romano](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Roberta_Romano)
+
+ - [Valerio Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Valerio_Cestarelli)
+ - [Roberta Romano](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Roberta_Romano)
 
 ## License
 
