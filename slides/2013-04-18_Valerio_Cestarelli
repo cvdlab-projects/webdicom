@@ -1,0 +1,44 @@
+# WebDicom - Block Decomposition
+
+- - -
+
+## Problem description:
+
+- Block Decomposition of images
+- Take Coordinates of blocks of interest
+
+- - -
+## Individual Task:
+
+- We've found an algorithm implemented in Java.
+- I'm going to modify and to readapt the algorithm to our purposes.
+
+![QuadTree](/home/massimo/Scrivania/Biomedica0.jpg)
+
+- - -
+
+## Image segmentation
+
+- Preamble
+- Case of study
+- Theoretical and practical analysis of openCV implementation (PACE)  
+- Theoretical and practical analysis of matlab implementation (FARRUGGIO)
+
+- - -
+
+## Analysis of algorithms for block decomposition of images
+
+We thought to take an algorithm for images' decomposition and apply it to a dicom object.
+We could extrapolate the image from dicom object, segment it, and return a new dicom object with segmented image.
+
+To reach this scope we thought to use open.cv module in C++, or reimplement an algorithm in C++ or Java. (What's the better?)
+
+--Tasks Division--
+
+- Roberta Romano: half of implementation
+- Valerio Cestarelli: half of implementation
+
+
+- - -
+
+# The End
