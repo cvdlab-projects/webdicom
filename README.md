@@ -12,10 +12,10 @@ Web DICOM project
 * Valerio Cestarelli
  
 ## Project Presentation Slides
-[Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/WebDicomPresentation.md)
+[Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-03-28.md)
 
 ## Project Tasks Division Slides
-[Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/WebDicomTaskDivision.md)
+[Slides](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-11.md)
 
 ## License
 
