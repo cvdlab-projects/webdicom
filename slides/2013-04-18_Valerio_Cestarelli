@@ -1,21 +1,16 @@
 # WebDicom - Block Decomposition
 
 - - -
-
 ## Problem description:
-
 - Block Decomposition of images
 - Take Coordinates of blocks of interest
-
 - - -
 ## Individual Task:
-
 - We've found an algorithm implemented in Java.
 - I'm going to modify and to readapt the algorithm to our purposes.
 
 *QuadTree Decomposition:*
 ![QuadTree](http://imageshack.us/a/img803/1708/biomedica0.jpg)
-
 - - -
 ##Solution:
 
@@ -25,20 +20,17 @@ Has been inserted, in addition, a small GUI, which makes it simple to use the qu
 
 ![QuadTree](http://imageshack.us/a/img837/4349/biomedica1.png)
 ![QuadTree](http://imageshack.us/a/img716/676/biomedica2.png)
-
 - - -
 ##Solution:
 
 Readaptation of the algorithm to our purposes, in particular:
   Readaptation of parameters' values, to take contours of bones and particulars of interest.
   Extraction of well known format from Dicom images.
-
 - - -
 ##Solution:
 
 Other possibility:
 - Take adiacent pixels of same color density and put they in the same cell.
-
 - - -
 
 # The End
