@@ -13,8 +13,18 @@
 - We've found an algorithm implemented in Java.
 - I'm going to modify and to readapt the algorithm to our purposes.
 
+*QuadTree Decomposition:*
 ![QuadTree](http://imageshack.us/a/img803/1708/biomedica0.jpg)
 
+- - -
+##Solution:
+
+Initially, into the implementation found, there were multiple algorithms of decomposition.
+We only took the one best suited to our purposes.
+Has been inserted, in addition, a small GUI, which makes it simple to use the quadtree.
+
+![QuadTree](http://imageshack.us/a/img837/4349/biomedica1.png)
+![QuadTree](http://imageshack.us/a/img716/676/biomedica2.png)
 - - -
 
 # The End
