@@ -29,6 +29,7 @@ Readaptation of the algorithm to our purposes, in particular:
 - - -
 ##Solution:
 Other possibility:
+
   - Take adiacent pixels of same color density and put they in the same cell.
 - - -
 
