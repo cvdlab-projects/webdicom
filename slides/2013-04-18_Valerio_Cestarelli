@@ -1,11 +1,11 @@
 # WebDicom - Block Decomposition
 
 - - -
-## Problem description:
+##Problem description:
 - Block Decomposition of images
 - Take Coordinates of blocks of interest
 - - -
-## Individual Task:
+##Individual Task:
 - We've found an algorithm implemented in Java.
 - I'm going to modify and to readapt the algorithm to our purposes.
 
