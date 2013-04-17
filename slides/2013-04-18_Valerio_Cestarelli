@@ -2,12 +2,12 @@
 
 - - -
 ##Problem description:
-- Block Decomposition of images
-- Take Coordinates of blocks of interest
+  - Block Decomposition of images
+  - Take Coordinates of blocks of interest
 - - -
 ##Individual Task:
-- We've found an algorithm implemented in Java.
-- I'm going to modify and to readapt the algorithm to our purposes.
+  - We've found an algorithm implemented in Java.
+  - I'm going to modify and to readapt the algorithm to our purposes.
 
 *QuadTree Decomposition:*
 ![QuadTree](http://imageshack.us/a/img803/1708/biomedica0.jpg)
