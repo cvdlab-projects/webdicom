@@ -21,7 +21,10 @@ Web DICOM project
 
  - [Valerio Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Valerio_Cestarelli)
  - [Roberta Romano](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Roberta_Romano)
-
+ - [Giovanni Pace](http://apily.io/slidify?md=https://raw.github.com/h4ergo/prova/master/PRESENTAZIONI_BIO/presentazione_GP.md)
+ - [Fabio Mastromatteo](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Fabio_Mastromatteo.md)
+ - [Serena Sforza](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Serena_Sforza.md)
+ - [Andrea Farruggio](http://apily.io/slidify?md=https://raw.github.com/cvdlab-cg/442999/master/progetto/andreafarruggio.md)
 ## License
 
 (The MIT License)
