@@ -21,7 +21,7 @@ that will be passed in Plasm to allow the reconstruction of the 3D
 ![](http://imageshack.us/a/img90/7254/image1st.png)
 - - -
 # Esempio
-![](http://imageshack.us/a/img594/623/immagine2fah.png)
+                 ![](http://imageshack.us/a/img594/623/immagine2fah.png)
 - - -
 # Solution
 
@@ -29,5 +29,6 @@ Implement a method in the class QuadTree.java that allows to store
 the required values.
 
 ![](http://imageshack.us/a/img221/3380/immagine3k.png)
+- - - 
 
 # The End
