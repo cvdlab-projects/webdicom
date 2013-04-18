@@ -25,6 +25,7 @@ Web DICOM project
  - [Fabio Mastromatteo](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Fabio_Mastromatteo.md)
  - [Serena Sforza](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Serena_Sforza.md)
  - [Andrea Farruggio](http://apily.io/slidify?md=https://raw.github.com/cvdlab-cg/442999/master/progetto/andreafarruggio.md)
+
 ## License
 
 (The MIT License)
