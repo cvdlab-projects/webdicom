@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<title>Image Segmentation v1.0 - Web DICOM - Giovanni Pace</title>
+	<script src="html5slider.js"></script>
+	<script>
+	onload = function() {
+	  var $ = function(id) { return document.getElementById(id); };
+	  $('mini').oninput = function() { $('minimo').innerHTML = this.value; };
+	  $('mini').oninput();
+	  $('maxi').oninput = function() { $('massimo').innerHTML = this.value; };
+	  $('maxi').oninput();
+	};
+	</script>
+	
+	<script type="text/javascript">
+      
+	  
+	  function drawImage(imageObj) {
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        var x = 69;
+        var y = 50;
+
+        context.drawImage(imageObj, x, y);
+
+        var imageData = context.getImageData(x, y, imageObj.width, imageObj.height);
+        var data = imageData.data;
+
+        for(var i = 0; i < data.length; i += 4) {
+		  
+          // red
+          r = data[i]
+          // green
+          g = data[i + 1]
+          // blue
+          b = data[i + 2]
+		  var  mini 	= document.getElementById('mini').value;
+		  var  maxi 	= document.getElementById('maxi').value;
+	  
+		  var v = 0;
+		  if((r + g + b) < mini || (r + g + b) > maxi){
+			v = 255;
+		  } 
+		  data[i] = v; data[i+1] = v; data[i+2] = v;		  
+        }
+
+        // overwrite original image
+        context.putImageData(imageData, x, y);
+      }
+      
+      var imageObj = new Image();
+	  
+	  function changed(){
+		drawImage(imageObj);
+	  };
+	  
+	  /*
+		  imageObj.onload = function() {
+			drawImage(this);
+	   };
+	   */
+      imageObj.src = 'immagine.jpg';
+    </script>
+  </head>
+  <body>
+  <table>
+   <tr>
+		<td>
+			<canvas id="myCanvas" width="550" height="550"></canvas>
+		</td>
+		<td>
+				<table>
+				<tr>
+					<td><br>					
+						<input type="range" id="mini"  value="150" min="0" max="765" step="1" / style="width: 250px;" onChange="changed()">
+						<div id="minimo">&nbsp;</div>
+						<input type="range" id="maxi"  value="200" min="0" max="765" step="1" / style="width: 250px;" onChange="changed()">
+						<div id="massimo">&nbsp;</div><br>
+					</td>
+				</tr>
+		</td>
+	</tr>
+	<tr>
+		
+	</tr>
+  </table>
+	
+  </body>
+</html>
