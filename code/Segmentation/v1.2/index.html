@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-	<title>Image Segmentation v1.1 - Web DICOM - Giovanni Pace</title>
+	<title>Image Segmentation v1.2 - Web DICOM - Giovanni Pace</title>
 	<script src="html5slider.js"></script>
 	<script>
 	onload = function() {
@@ -14,9 +14,42 @@
 	</script>
 	
 	<script type="text/javascript">
-    //Image Segmentation alghorithm  
+	//Grayscale Filter
+	
+    function drawImage_gray(imageObj) {
+        var canvas = document.getElementById('canvas_2');
+        var context = canvas.getContext('2d');
+        var x = 69;
+        var y = 50;
+
+        context.drawImage(imageObj, x, y);
+
+        var imageData = context.getImageData(x, y, imageObj.width, imageObj.height);
+        var data = imageData.data;
+
+		//every 4 because data length 3 are every RGB
+        for(var i = 0; i < data.length; i += 4) {
+		 
+		  var brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2];
+          // red
+          r = data[i];
+		  data[i] = brightness;
+          // green
+          g = data[i + 1];
+		  data[i + 1] = brightness;
+          // blue
+          b = data[i + 2];
+		  data[i + 2] = brightness;	  
+        }
+
+        // overwrite original image
+        context.putImageData(imageData, x, y);
+      }
+	
+	
+	//Image Segmentation alghorithm  
 	  
-	  function drawImage(imageObj) {
+	  function drawImage_segm(imageObj) {
         var canvas = document.getElementById('canvas_1');
         var context = canvas.getContext('2d');
         var x = 69;
@@ -53,7 +86,8 @@
       var imageObj = new Image();
 	  
 	  function changed(){
-		drawImage(imageObj);
+		drawImage_gray(imageObj);
+		drawImage_segm(imageObj);
 	  };
 	  
 	  /*
@@ -61,6 +95,7 @@
 			drawImage(this);
 	   };
 	   */
+	   
       imageObj.src = 'immagine.jpg';
     </script>
   </head>
@@ -71,6 +106,22 @@
 	<td align=""><h2>Original image</h2>
 					<p align="justify">Here you can see the original image, scroll down the page for apply Segmentation algorithm.</p></td>
   </tr>
+  <tr>
+		<td>
+			<canvas id="canvas_2" width="550" height="550"></canvas>
+		</td>
+		<td>
+				<table>
+				<tr>
+					<td>
+					<h2>Grayscale filter</h2>
+					<p align="justify">We need to convert the image to gray for having a deeper precision for the segmentation.</p>
+					
+					</td>
+				</tr>
+				</table>
+		</td>
+	</tr>
    <tr>
 		<td>
 			<canvas id="canvas_1" width="550" height="550"></canvas>
@@ -88,6 +139,7 @@
 						<div id="massimo">&nbsp;</div><br>
 					</td>
 				</tr>
+				</table>
 		</td>
 	</tr>
 	<tr>
