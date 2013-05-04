@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-	<title>Image Segmentation v1.2 - Web DICOM - Giovanni Pace</title>
+	<title>Image Segmentation v1.3 - Web DICOM - Giovanni Pace</title>
 	<script src="html5slider.js"></script>
 	<script>
 	onload = function() {
@@ -57,6 +57,7 @@
 
         context.drawImage(imageObj, x, y);
 
+		//Creation of a long Array with every pixel.
         var imageData = context.getImageData(x, y, imageObj.width, imageObj.height);
         var data = imageData.data;
 
@@ -85,6 +86,12 @@
         // overwrite original image
         context.putImageData(imageData, x, y);
 		
+		//Generate the dataURL for the image transfer
+		var dataURL = canvas.toDataURL("image/png");
+		
+		//Populate the Textarea with the dataURL
+		var target = document.getElementById("dt_url");
+		target.value = dataURL;
       }
       
       var imageObj = new Image();
@@ -147,7 +154,19 @@
 		</td>
 	</tr>
 	<tr>
-		
+		<td align="center">
+		<textarea rows="15" id="dt_url" name="dt_url" style="width: 90%">
+		</textarea>
+		</td>
+		<td><table>
+				<tr>
+					<td>
+					<h2>URL for processing the Thresholded image</h2>
+					<p align="justify">Here you have the DataURL of the image, this is an enormous link that represents the Base64 encoding of the image that can be used for pass the entire eprocessed image to a form tag.<br><br>You need to use POST method dued to the big dimensions of the string.</p>
+					
+					</td>
+				</tr>
+				</table></td>
 	</tr>
   </table>
 	
