@@ -65,14 +65,13 @@
 		//Populate the Textarea with the coordinates
 		var target_coo = document.getElementById("dt_coo");
 		target_coo.value = "";
-		
-		//Initialize the Coordinates array
-		//var x_1 = Array;
-		//var y_1 = Array;
 			
 		//Thresholding values MIN-MAX
 		var  mini 	= document.getElementById('mini').value;
 		var  maxi 	= document.getElementById('maxi').value;
+		
+		//Get the checkbox for confirmation of the coordinates
+		var  check_box	= document.getElementById('plasm');
 		
 		//Utility variable for counting the X-axis value
 		var j = 0;
@@ -96,9 +95,11 @@
 				v = 255;
 			 } 
 			 else{
-					y_1 = Math.floor(Math.floor(i/imageObj.width)/4);
-					
-					target_coo.value += "DRAW(T([1,2])([" + j + "," + y_1 + "])(CUBOID([1,1,1])))\n";
+					if(check_box.checked == true){					
+						y_1 = Math.floor(Math.floor(i/imageObj.width)/4);
+						
+						target_coo.value += "DRAW(T([1,2])([" + j + "," + y_1 + "])(CUBOID([1,1,1])))\n";
+					}
 			 }
 			 //Re-creation of the long Array of pixels.
 			 data[i] = v; data[i+1] = v; data[i+2] = v;		  
@@ -210,6 +211,10 @@
 		
 	</form>
 		<tr><td COLSPAN="2">&nbsp;</td></tr>
+		<tr><td COLSPAN="2">&nbsp;</td></tr>
+		<tr><td COLSPAN="2">&nbsp;</td></tr>
+		<tr><td COLSPAN="2" align="center"><input type="button" value="REFRESH PAGE AND CALCULATE COORDINATES" onClick="changed()"> Check if you want the coordinates: <input type="checkbox" name="plasm" id="plasm" value="yes">  </td></tr>
+		<tr><td COLSPAN="2">&nbsp;</td></tr>
 		<tr>
 				<td align="center" style="width: 50%">
 				<textarea rows="15" id="dt_coo" name="dt_coo" style="width: 90%"></textarea>
@@ -219,7 +224,7 @@
 					<tr>
 						<td>
 						<h2>Coordinates of the Thresholded image (BETA)</h2>
-						<p align="justify">Here you can see the Beta version of the coordinates finding. <br><br>The cordinates represents all the BLACK pixels in the image.<br><br>COPY AND PASTE THE CODE ON PLASM.JS!!!</p>
+						<p align="justify">Here you can see the Beta version of the coordinates finding. <br><br>The cordinates represents all the BLACK pixels in the Thresholded image.<br><br>COPY AND PASTE THE CODE ON PLASM.JS!!!</p>
 						
 						</td>
 					</tr>
