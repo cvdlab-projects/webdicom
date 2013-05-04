@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-	<title>Image Segmentation v1.5 - Web DICOM - Giovanni Pace</title>
+	<title>Image Segmentation v1.5 - Web DICOM - Giovanni Pace e Andrea Farruggio</title>
 	<script src="html5slider.js"></script>
 	<script>
 	onload = function() {
@@ -97,7 +97,7 @@
 			 else{
 					y_1 = Math.floor(Math.floor(i/imageObj.width)/4);
 					
-					target_coo.value += "[" + j + "," + y_1 + "],";
+					target_coo.value += "DRAW(T([1,2])([" + j + "," + y_1 + "])(CUBE(1)))\n";
 			 }
 			 //Re-creation of the long Array of pixels.
 			 data[i] = v; data[i+1] = v; data[i+2] = v;		  
