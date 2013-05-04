@@ -14,6 +14,7 @@
 	</script>
 	
 	<script type="text/javascript">
+	
 	//Grayscale Filter
 	//For descriptions of generic functions, please see the original "Thresholding algorithm"
     function drawImage_gray(imageObj) {
@@ -97,7 +98,7 @@
 			 else{
 					y_1 = Math.floor(Math.floor(i/imageObj.width)/4);
 					
-					target_coo.value += "DRAW(T([1,2])([" + j + "," + y_1 + "])(CUBE(1)))\n";
+					target_coo.value += "DRAW(T([1,2])([" + j + "," + y_1 + "])(CUBOID([1,1,1])))\n";
 			 }
 			 //Re-creation of the long Array of pixels.
 			 data[i] = v; data[i+1] = v; data[i+2] = v;		  
@@ -105,16 +106,7 @@
 			 //Incrementing the value of the axis
 			 j++;
         }
-		/*
-		for(var i = 0; i < data.length/imageObj.width; i += 4) {
-				x_1 = Math.floor(i / 4) % 4;
-				y_1 = Math.floor(Math.floor(i/imageObj.width)/4);
-				
-				if(i<450){
-						target_coo.value += "[" + i + "," + y_1 + "],";
-				} 
-		}
-		*/
+		
         // overwrite original image
         context.putImageData(imageData, x, y);
 		
@@ -124,8 +116,6 @@
 		//Populate the Textarea with the dataURL
 		var target_url = document.getElementById("dt_url");
 		target_url.value = dataURL;
-		
-		
       }
       
       var imageObj = new Image();
@@ -135,12 +125,6 @@
 		drawImage_gray(imageObj);
 		drawImage_segm(imageObj);
 	  };
-	  
-	  /*
-		  imageObj.onload = function() {
-			drawImage(this);
-	   };
-	   */
 	   
       imageObj.src = 'immagine.jpg';
     </script>
@@ -191,7 +175,7 @@
 	<!-- FORM of DataURL -->
 	<table style="width: 100%">
 	
-	<form name="input" action="posted.php" method="get">
+	<form name="input" action="posted.php" method="POST">
 		<tr>
 				<td align="center" style="width: 50%">
 				<textarea rows="15" id="dt_url" name="dt_url" style="width: 90%"></textarea>
