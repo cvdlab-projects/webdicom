@@ -26,6 +26,12 @@ Web DICOM project
  - [Valerio Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Valerio_Cestarelli)
  - [Roberta Romano](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Roberta_Romano)
 
+## First Checkpoint
+
+ - [Romano-Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-05-09_Roberta_Romano_Valerio_Cestarelli.md)
+
+
+
 ## License
 
 (The MIT License)
