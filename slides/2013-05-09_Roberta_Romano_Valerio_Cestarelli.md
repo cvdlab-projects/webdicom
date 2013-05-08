@@ -12,3 +12,7 @@
   - We've read the image pixel by pixel
   - We've checked what color is in predominance into the block
   - We've filled the block with predominance color
+
+- - -
+
+#DEMO
