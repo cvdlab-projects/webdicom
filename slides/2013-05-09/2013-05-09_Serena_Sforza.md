@@ -1,6 +1,6 @@
 #WebDICOM
 ---
-#Steps
+##Steps
 
 ###1. View a DICOM image in a HTML canvas
 ###2. Segmentation
