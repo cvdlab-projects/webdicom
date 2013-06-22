@@ -36,7 +36,7 @@
 
  
 
-![image](1_screen_graf.jpg)
+![image](img/1_screen_graf.jpg)
 
 - - - 
 
@@ -53,25 +53,25 @@
 
 
 
-![image](2_screen_graf.jpg)
+![image](img/2_screen_graf.jpg)
 
 ### Create_3D
 
 #### -By checking the botton indicated from green indicator you can obtain the python coordinate for 3D computation  
 
-![image](3_screen_graf.jpg)
+![image](img/3_screen_graf.jpg)
 
 
 ### ScreenShoot
 
 #### - Here are some sample from an array of 4 slice
 
-![image](gr7.jpg)
+![image](img/gr7.jpg)
 
-![image](gr8.jpg)
+![image](img/gr8.jpg)
 
 
-![image](gr9.jpg)
+![image](img/gr9.jpg)
 
 
 - - -
