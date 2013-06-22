@@ -1,10 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-	<title>Image2Segment v 1.2 - Modificato a BIO</title>
-	<script type="text/javascript">
-	  
-	  function drawImage(imageObj) {
+function drawImage(imageObj) {
 		/*----------------------------------------------------------------------------
 		-- Initializzation of the Canvas containers, in the first canvas
 		-- myCanvas, we print the image, in the second one we can show
@@ -12,32 +6,29 @@
 		----------------------------------------------------------------------------*/
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext('2d');
-        var x = 0;
-        var y = 0;
-		var w =  imageObj.width;
-		var h =  imageObj.height;
-		
-		
 		var canvas_1 = document.getElementById('myCanvas_1');
         var context_1 = canvas_1.getContext('2d');
 		
-        context.drawImage(imageObj, x, y);											//Starting pixels for the processing
+        var x = 0;
+        var y = 0;
+		var w =  imageObj.width;
+		var h =  imageObj.height;		
+		
+        context.drawImage(imageObj, x, y);													//Starting pixels for the processing
 
         var imageData = context.getImageData(x, y, w, h);					//Creation of a long Array with the informations of every pixel, RGBA are stored sequentially in this array..
+		
         var data = imageData.data;
-		
-		
+		//context_1.putImageData(imageData, x, y);
 		/*----------------------------------------------------------------------------
-		-- This function checks if the color is ok, then returns 1 if the color
-		-- matches the range we have set returns 1, else 0.
+		-- This function checks if the color is 
 		----------------------------------------------------------------------------*/
 		function color(x, y) {
 	
 			var i=(y)*(w*4)+(x*4);
-			var r=data[i];
-			return (r < 255) ? 1 : 0;
+			var b=data[i+2];
+			return (b < 150) ? 1 : 0;
 		}
-		
 		function print_grid_utility(x,y){		
 			context.fillStyle = "rgb(200,0,0)";
 			context.fillRect(x,y,1,1);	
@@ -70,6 +61,7 @@
 					x += 1;
 					test(x, y);
 					print_grid_utility(x,y);
+					
 				}
 			  
 				prev = color(x, y);															//Upper right start to lower right end.
@@ -85,15 +77,17 @@
 					x += 1;
 					test(x, y);
 					print_grid_utility(x,y);
+					
 				}
 
 				x = x0;																			//Upper left start to lower left end.
 				y = y0;
 				prev = color(x, y);
 				for (i = 0; i < h; i += 1) {
-					y += 1;			  
+					y += 1;
 					test(x, y);
 					print_grid_utility(x,y);
+								  
 				}
 			  return points;																	//Return the array of interception points.
 			}
@@ -107,15 +101,18 @@
 				var points = get_border_points(x0, y0, w, h); 
 				var ceil = Math.ceil;														//If the square medium point is not even, round it after the split.											
 				var floor = Math.floor;														
+				var var_w;
+				var var_h;
+				
+																
 				var w_f = floor(w/2);
 				var w_c = ceil(w/2);
 				var h_f = floor(h/2);
 				var h_c = ceil(h/2);
 				var push = Array.prototype.push;
-				
+			
 				if (points.length === 0) {													//If the square has no color change points.
 					return result;
-					//console.log("verifica");
 				}
 
 				if (points.length === 1) {													//If the square has only one color change point (rumor).
@@ -126,27 +123,22 @@
 					result.push(points);
 					return result;
 				}
-
-			  //console.log(points);
-			 
-
-
-			if(w_f === 0 || h_f === 0){
+		
+			if(w_f === 1){
 			  return result;
 			}
 			  segments = get_segments(x0, y0, w_f, h_f);
 			  push.apply(result, segments);					//Function that adds the array of [x,y] coordinates in [results].
+			  //debugger;
 
-			  segments = get_segments(x0 + w_f - 1, y0, w_c + 1, h_f);
+			  segments = get_segments(x0 + w_f, y0, w_c, h_f); 
 			  push.apply(result, segments);
 
-			  segments = get_segments(x0 + w_f - 1, y0 + h_f - 1, w_c + 1, h_c + 1);
+			  segments = get_segments(x0 + w_f, y0 + h_f, w_c, h_c);
 			  push.apply(result, segments);
 
-			  segments = get_segments(x0, y0 + h_f - 1, w_f, h_c + 1);
+			  segments = get_segments(x0, y0 + h_f, w_f, h_c);
 			  push.apply(result, segments);
-			  
-			  
 			  return result;
 			}
 		
@@ -174,7 +166,7 @@
 					Array.prototype.push.apply(result, segments);
 				}
 			  }
-				console.log(result);
+				//console.log(result);
 				
 			  return result;
 			}
@@ -214,10 +206,10 @@
 			  var segments = navigate(w_d, h_d, w, h);
 			  //var result = order_segments(segments);
 			  
-			  console.log('done');
-				print_segments(segments);
-			  //return result;
-			}
+			print_segments(segments);
+				
+			var lunghezza = segments.length;
+		}
 			
 		/*----------------------------------------------------------------------------
 		-- Function "On Mouse Click"
@@ -228,42 +220,14 @@
 				  x: evt.clientX - rect.left,
 				  y: evt.clientY - rect.top
 				};
-			  } 
+			  }
+			
 			canvas.addEventListener('click', function(evt) {
 			var mousePos = getMousePos(canvas, evt);
 			var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-			console.log(message);
 			
-			segment(35, 35, imageObj.width, imageObj.height)
+				var  mini 	= document.getElementById('square_width').value;			  
+				segment(mini, mini, imageObj.width, imageObj.height);
 			
-		}, false);
-		
+		}, false);		
       }
-	  
-      /*----------------------------------------------------------------------------
-		-- Image canvas CALL.
-		----------------------------------------------------------------------------*/
-      var imageObj = new Image();
-	  
-	  function changed(){
-		drawImage(imageObj);		
-	  };
-      imageObj.src = 'prova_5.png';
-    </script>
-  </head>
-  <body onLoad="changed()">
-  <table BORDER="1">
-   <tr>
-		<td>
-			<canvas id="myCanvas" width="200" height="200"></canvas>
-		</td>
-		
-		<td>
-			<canvas id="myCanvas_1" width="200" height="200"></canvas>
-		</td>
-	</tr>
-	</table>
-	
-	
-  </body>
-</html>

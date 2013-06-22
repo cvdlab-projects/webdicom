@@ -1,0 +1,455 @@
+/*Style for Web-Visual page 
+Realised by Marco Barbieri, Cappelli Eleonora, Antonello Gatto, 
+Gianluca Parente, Giorgio Cerrito
+,Matteo Riccardi, Luigi Cristiano (il boss)*/
+
+
+
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	background: #3a5896 url(images/bg01.png) repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #4b4b4b;
+	height: 100%;
+
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: bolder;
+	color: #222222;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+p, ol, ul {
+	margin-top: 0px;
+	padding: 0px;
+}
+
+p, ol {
+	line-height: 180%;
+}
+
+strong {
+}
+
+a {
+	color: #5C5539;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+img.border {
+}
+
+img.alignleft {
+	float: left;
+	margin-top: 8px;
+	margin-right: 50px;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.aligncenter {
+	margin: 0px auto;
+}
+
+hr {
+	display: none;
+}
+
+/** WRAPPER */
+
+#wrapper {
+	overflow: auto;
+	background: #FFFFFF;
+box-shadow: 
+        inset 0px 11px 8px -20px #CCC,
+        inset 0px -11px 8px -10px #CCC;}
+
+#container {
+    min-height: 100%;
+    height: auto;
+    height: 100%;
+    margin: 0 auto -50px; 
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* Header */
+
+#header-wrapper {
+	height: 70px;
+}
+
+#header {
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 310px;
+	height: 40px;
+	padding: 0px 0px 0px 40px;
+}
+
+#logo h1 {
+	padding: 5px 0px 0px 0px;
+	letter-spacing: -2px;
+	font-size: 2.6em;
+}
+
+#logo h1 a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+/* Menu */
+
+#menu {
+	position: relative;
+	float: left;
+	display:none;
+	left:500px;
+	width: 810px;
+	height: 40px;
+	padding: 0px 10px 0px 0px;
+}
+#show {
+	
+	position: relative;
+	left:700px;
+	
+}
+
+#menu ul {
+	float: right;
+	margin: 0;
+	padding: 5px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	display: block;
+	margin-left: 1px;
+	padding: 7px 20px 7px 20px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #FFFFFF;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	text-decoration: none;
+	background: #DDDDDD;
+	border-radius: 5px;
+	color: #1f31bb;
+}
+
+/* Page */
+
+#page-wrapper {
+	overflow: hidden;
+	float: left;
+}
+
+#page {
+	overflow: hidden;
+	width: 900px;
+	margin: 0px auto;
+	padding: 10px 10px;
+	float: left;
+	height: 480px;
+}
+
+
+
+/** CONTENT */
+
+#wide-content {
+	padding: 50px;
+	border: 10px solid #f1f1f1;
+}
+
+#wide-content h2 {
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 36px;
+	color: #222222;
+}
+
+
+/** CONTENT */
+
+#content {
+	float: right;
+	width: 760px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content h2 {
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 36px;
+	color: #222222;
+}
+
+#content .subtitle {
+	padding: 0px 0px 30px 0px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	color: #81AFC5;
+}
+
+
+
+/* Footer */
+
+
+#space {
+	overflow: auto;
+	background: #FFFFFF;
+	height: 10px;
+	width: auto;
+}
+
+#footer-wrapper {
+	overflow: hidden;
+	clear: both;
+	margin: 10px auto;
+
+}
+
+
+#footer {
+	overflow: hidden;
+	padding:20px 0px 0px 0px;
+	text-align: center;
+	font-size: 12px;
+	color: #b0b9ff;
+}
+ul#css3menu1,ul#css3menu1 ul{
+	left:600px;
+	margin:0;
+	list-style:none;
+	padding:0;
+	background-color:#000;
+	background-image:url("mainbk.png");
+	background-repeat:repeat;
+	border-width:0px;
+	border-style:solid;
+	border-color:#162436;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	}
+ul#css3menu1 ul{
+	display:none;
+	position:absolute;
+	left:0;
+	top:100%;
+	-moz-box-shadow:0.7px 0.7px 1px #3E3E3E;
+	-webkit-box-shadow:0.7px 0.7px 1px #3E3E3E;
+	box-shadow:0.7px 0.7px 1px #3E3E3E;
+	background-color:#3A5896;
+	background-image:none;
+	border-width:1px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-style:solid;
+	border-color:#162436;
+	padding:0 9px 9px;
+	}
+ul#css3menu1 li:hover>*{
+	display:block;}
+ul#css3menu1 li{
+	position:relative;
+	display:block;
+	white-space:nowrap;
+	font-size:0;
+	float:left;
+	}
+ul#css3menu1 li:hover{
+	z-index:1;}
+ul#css3menu1{
+	font-size:0;
+	z-index:999;
+	position:relative;
+	display:inline-block;
+	zoom:1;
+	padding:1px 1px 1px 0;
+	*display:inline;}
+* html ul#css3menu1 li a{
+	display:inline-block;}
+ul#css3menu1>li{
+	margin:0 0 0 1px;}
+ul#css3menu1 ul>li{
+	margin:1px 0 0;}
+ul#css3menu1 a:active, ul#css3menu1 a:focus{
+	outline-style:none;
+	}
+ul#css3menu1 a{
+	display:block;
+	vertical-align:middle;
+	text-align:left;
+	text-decoration:none;
+	font:bold 12px Arial;
+	color:#cccccc;
+	cursor:default;
+	padding:10px;
+	background-color:#3A5896;
+	background-image:url("mainbk.png");
+	background-repeat:repeat;
+	background-position:0 200px;
+	border-width:0px;
+	border-style:none;
+	border-color:;
+	}
+ul#css3menu1 ul li{
+	float:none;
+	margin:9px 0 0;
+	}
+ul#css3menu1 ul a{
+	text-align:left;
+	padding:8px 0 0 0;
+	background-color:#3A5896;
+	background-image:none;
+	border-width:1px 0 0 0;
+	border-style:solid;border-color:#293344;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	font:13px Arial;
+	color:#cccccc;
+	text-decoration:none;
+	}
+ul#css3menu1 li:hover>a,ul#css3menu1 li a.pressed{
+	background-color:#55aaff;
+	border-style:none;
+	color:#ffffff;
+	background-image:url("mainbk.png");
+	background-position:0 100px;
+	text-decoration:none;
+	}
+ul#css3menu1 img{
+	border:none;
+	vertical-align:middle;
+	margin-right:10px;
+	}
+ul#css3menu1 span{
+	display:block;
+	overflow:visible;
+	background-position:right center;
+	background-repeat:no-repeat;
+	padding-right:0px;
+	}
+ul#css3menu1 ul li:hover>a,ul#css3menu1 ul li a.pressed{
+	background-color:#253A56;
+	background-image:none;
+	border-style:solid;
+	border-color:#293344;
+	color:#ffffff;
+	text-decoration:none;
+	}
+ul#css3menu1 li.topfirst>a{
+	border-radius:4px 0 0 4px;
+	-moz-border-radius:4px 0 0 4px;
+	-webkit-border-radius:4px;
+	-webkit-border-top-right-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	text-shadow:#000000 0px -1px 1px;}
+	
+ul#css3menu1 li.topfirst:hover>a,ul#css3menu1 li.topfirst a.pressed{
+	text-shadow:#3d3d3d 0px -1px 1px;
+	}
+ul#css3menu1 li.toplast>a{
+	border-radius:0 4px 4px 0;
+	-moz-border-radius:0 4px 4px 0;
+	-webkit-border-radius:0;
+	-webkit-border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	text-shadow:#000000 0px -1px 1px;
+	}
+ul#css3menu1 li.toplast:hover>a,ul#css3menu1 li.toplast a.pressed{
+	text-shadow:#3d3d3d 0px -1px 1px;
+	}
+ul#css3menu1 _>li>a{
+	padding:0;
+	}
+ul#css3menu1 li.subfirst>a{
+	border-width:0;
+	border-style:none;padding:0;
+	}
+ul#css3menu1 li.subfirst:hover>a,ul#css3menu1 li.subfirst a.pressed{
+	border-style:none;
+	}
+
+	.buttons {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #3a5996) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #3a5996 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#3a5996');
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528ecc;
+}.buttons:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3a5996), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #3a5996 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a5996', endColorstr='#79bbff');
+	background-color:#3a5996;
+}.buttons:active {
+	position:relative;
+	top:1px;
+}
+/*
+#plasm{
+	width: 60%;
+	height:70%;
+	margin-left: 19%%;
+	margin-top: 1%;
+}*/

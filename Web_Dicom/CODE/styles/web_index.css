@@ -1,0 +1,385 @@
+/* Style for Web-Index page 
+realised by Marco Barbieri */
+
+
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #4b4b4b;
+	height: 100%;
+	
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: bolder;
+	color: #222222;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+p, ol, ul {
+	margin-top: 0px;
+	padding: 0px;
+}
+
+p, ol {
+	line-height: 180%;
+}
+
+strong {
+}
+
+a {
+	color: #5C5539;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+img.border {
+}
+
+img.alignleft {
+	float: left;
+	margin-top: 8px;
+	margin-right: 50px;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.aligncenter {
+	margin: 0px auto;
+}
+
+hr {
+	display: none;
+}
+/*rules*/
+/*
+@media screen{ 
+ #page-wrapper>#menu_button{ position: fixed;}
+*/
+
+
+/** WRAPPER */
+
+
+box-shadow: 
+        inset 0px 11px 8px -20px #CCC,
+        inset 0px -11px 8px -10px #CCC;}
+
+#container {
+    min-height: 100%;
+    height: auto;
+    height: 100%;
+    margin: 0 auto -50px; 
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* Header */
+
+#header-wrapper {
+	overflow: hidden;
+	height: 40px;
+	background: #3A5896 url(images/bg01.png) repeat;
+
+}
+
+#header {
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 310px;
+	height: 40px;
+	padding: 0px 0px 0px 40px;
+}
+
+#logo h1 {
+	padding: 5px 0px 0px 0px;
+	letter-spacing: -2px;
+	font-size: 2.6em;
+}
+
+#logo h1 a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* stampa il risultato, rappresentazione ad albero*/
+Div#printResult {
+
+    float:left;
+/*position:absolute;
+top:10%;
+left:50%;
+width:1000px;
+
+height:200px;
+margin-top: -100px;
+margin-left:-500px;
+text-align:center;
+    */
+/*I margin devono essere la metà di width e height. 
+ */
+}
+
+/* Menu */
+
+#menu {
+	float: right;
+	width: 810px;
+	height: 40px;
+	padding: 8px 10px 0px 0px;
+}
+
+#menu ul {
+	float: right;
+	margin: 0;
+	padding: 5px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	 
+	margin-left: 1px;
+	padding: 7px 20px 7px 20px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #FFFFFF;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	text-decoration: none;
+	background: #DDDDDD;
+	border-radius: 5px;
+	color: #1f31bb;
+}
+
+/* Page where there are two canvases: the first one with plasm enviroment and the second one with the json image*/
+
+
+#page-wrapper {
+	width: 100%;
+	height: 530px;
+	float: left;}
+
+#page {
+	width: 70%;
+	margin: 0px auto;
+	float: left;
+	height: 99%;
+	overflow: scroll;
+
+}
+
+/*CANVAS PLAMS*/ 
+
+#plasm{
+	float: left;
+	width: 98%;
+	height:98%;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+
+/*
+#plasm > canvas{
+	width: 440px;
+	height: 480px;
+}
+
+#div_image{
+	float: left;
+	border: solid 1px #CCC;
+
+}
+*/
+
+
+/** CONTENT */
+
+#wide-content {
+	padding: 50px;
+	border: 10px solid #f1f1f1;
+}
+
+#wide-content h2 {
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 36px;
+	color: #222222;
+}
+
+
+/** CONTENT */
+
+#content {
+	float: right;
+	width: 760px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content h2 {
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 36px;
+	color: #222222;
+}
+
+#content .subtitle {
+	padding: 0px 0px 30px 0px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	color: #81AFC5;
+}
+
+
+
+/* Footer */
+
+
+#footer-wrapper {
+overflow: hidden;
+margin-top: 0px;
+margin-bottom: 10px;
+height: 40px;
+clear: left;
+padding-top: 10px;
+}
+
+
+#footer {
+padding: 20px 0px 0px 0px;
+text-align: center;
+font-size: 12px;
+color: #FFFFFF;
+height: 50%;
+margin-top: 48%;
+padding-left: 550px;
+width: 100%;
+}
+
+
+
+
+/* about */
+
+#webindex-container-about {
+  top: 40px;
+  width: 380px;
+  left: 0px;
+  right: 0px;
+  /*line-height: 1;*/
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align:middle;
+}
+
+#webindex-container-contact {
+  top: 40px;
+  width: 380px;
+  left: 0px;
+  right: 0px;
+  /*line-height: 1;*/
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align:middle;
+}
+
+.webindex-container {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  overflow: scroll;
+  padding: 10px;
+  background-color: rgba(128,128,128,0.2);
+  box-shadow: 1px 1px 8px 1px #777;
+
+}
+
+.icon-close {
+  width: 16px;
+  height: 16px;
+  background: url(./images/close.png) no-repeat;
+  background-size: 100%;
+}
+
+#webindex-icon-close {
+  position: absolute;
+  background-size: 100%;
+  top: 10px;
+  right: 10px;
+
+}
+
+#webindex-icon-close:hover {
+	position: absolute;
+	background-size: 100%;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	opacity: .2;
+}
+
+.icon-contact-close {
+  width: 16px;
+  height: 16px;
+  background: url(./images/close.png) no-repeat;
+  background-size: 100%;
+}
+
+
+#webindex-icon-contact-close {
+  position: absolute;
+  background-size: 100%;
+  top: 10px;
+  right: 10px;
+
+}
+
+#webindex-icon-contact-close:hover {
+	position: absolute;
+	background-size: 100%;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	opacity: .2;
+}
+#webindex-copyright {
+  margin-top: 20px;
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <title>DICOM Image Viewer</title>
+<!--stile pagina-->
+<link href="styles/myCss/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="styles/myCss/custom.css" rel="stylesheet" type="text/css" media="all" />
+<!--console-->
+<link href="styles/myCss/bootstrap2.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="styles/myCss/custom2.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="js/console/codemirror.js"></script>
+    <script src="js/console/console_script.js"></script>
+
+    <!--Javascript and coffeescript modes-->
+    <script src="js/console/javascript.js"></script>
+    <script src="js/console/coffeescript.js"></script>
+    <script src="js/console/loadmode.js"></script>
+
+    <!--Hint-->
+    <script src="js/console/show-hint.js"></script>
+    <script src="js/console/javascript-hint.js"></script>
+
+    <link rel="stylesheet" href="styles/console_css/codemirror.css">
+    <link rel="stylesheet" href="styles/console_css/console.css">
+    <link rel="stylesheet" href="styles/console_css/show-hint.css">
+
+<!--fine console-->
+
+
+
+
+<!--VISUALIZZATORE DICOM-->
+    <link rel="stylesheet" type="text/css" href="jquery/css/smoothness/jquery-ui-1.8.20.custom.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <script type="text/javascript" src="js/jsDicom/glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="js/jsDicom/glpainter.js"></script>
+    <script type="text/javascript" src="js/jsDicom/shaders.js"></script>
+    <script type="text/javascript" src="js/jsDicom/canvaspainter.js"></script>
+    <script type="text/javascript" src="jquery/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jquery/js/jquery-ui-1.8.20.custom.min.js"></script>
+
+    <!-- External jsdicom-lib -->
+    <script type="text/javascript" src="jsdicom-lib/src/dcmdict.js"></script>
+    <script type="text/javascript" src="jsdicom-lib/src/binutils.js"></script>
+    <script type="text/javascript" src="jsdicom-lib/src/dcmfile.js"></script>
+    <script type="text/javascript" src="jsdicom-lib/src/dicomparser.js"></script>
+    <script type="text/javascript" src="jsdicom-lib/src/transfersyntax.js"></script>
+    <script type="text/javascript" src="jsdicom-lib/src/qr.js"></script>
+
+    <script type="text/javascript" src="js/jsDicom/GLU.js"></script>
+    <script type="text/javascript" src="js/jsDicom/cluts.js"></script>
+    <script type="text/javascript" src="js/jsDicom/app.js"></script>
+    <script type="text/javascript" src="js/jsDicom/tools.js"></script>
+    <script type="text/javascript" src="js/jsDicom/utilities.js"></script>
+    <script type="text/javascript" src="js/jsDicom/dcmseries.js"></script>
+    <script type="text/javascript" src="js/jsDicom/presentation.js"></script>
+    <script type="text/javascript">
+
+    var app = new DcmApp('view-area');
+
+    function load_urllist_from_url(url) {
+        app.load_urllist_from_url(url);
+    }
+
+    function testscroll(i, len) {
+        if(i > len-1)
+            return;
+        app.curr_file_idx = i;
+        app.draw_image();
+        setTimeout((function(a, b) { 
+                    return function() {
+                        testscroll(a, b);
+                    }})(i+1, len), 0);
+    }
+
+
+
+    $(document).ready(function() {
+        app.init();
+        $("input[type=file]").change(function(evt) {
+            //app.load_files(evt);
+        });
+        $("#test-scroll").click(function() {
+            testscroll(0, app.files.length);
+        });
+        // Setup cluts
+        for(clut in cluts) {
+            $("#clut-select optgroup").append($("<option>").val(clut).text(clut));
+        }
+
+        // Setup tools
+        for(tool in tools) {
+            var button = $("<div>").addClass("tool-button").text(tool);
+            $("#button-bar-horz").prepend(button);
+            $(button).click(function() {
+                $(this).parent().find("div").removeClass("butt-selected");
+                $(this).addClass("butt-selected");
+                app.activate_tool(tool);
+            });
+        }
+
+        $("#slider").slider();
+
+        $("button").button();
+
+        $("#axial-view").buttonset();
+
+        $("#view-metadata").click(function() {
+            app.fill_metadata_table();
+            $("#metadata-dialog").dialog({
+                modal: true,
+                width: 600,
+                button: {
+                    'Ok': function() {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+        });
+
+        $("#open").click(function() {
+            $("#open-dialog").dialog({
+                    modal: true,
+                    buttons: {
+                        'Ok': function() {
+                            var file_input = $("input[type=file]")[0];
+                            app.load_files(file_input.files);
+                            $(this).dialog('close');
+                        },
+                        'Cancel': function() {
+                            $(this).dialog('close');
+                        }
+                    }
+                });
+        });
+
+
+        $("#butt-reset").click(function() {
+            app.reset_levels();
+        });
+        $("#clut-select").change(function() {
+            app.set_clut($(this).val());
+        });
+        $("#window-presets").change(function() {
+            app.set_window_preset($(this).val());
+        });
+        function handleDragOver(evt) {
+            evt.stopPropagation();
+            evt.preventDefault();
+            evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+        }
+        function handleFileSelect(evt) {
+            evt.stopPropagation();
+            evt.preventDefault();
+            app.load_files(evt.dataTransfer.files);
+        }
+
+        // Setup the dnd listeners.
+        var dropZone = document.getElementById('filebox');
+        dropZone.addEventListener('dragover', handleDragOver, false);
+        dropZone.addEventListener('drop', handleFileSelect, false);
+        //webGLStart();
+    });
+
+    </script>
+</head>
+<body>
+
+<!-- header web-lar -->
+    <div id="header-wrapper">
+        <div id="header">
+            <div id="logo">
+                <h1><a>Web - Dicom</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="bihomed.html?#home"  title="home">Home</a></li>
+                    <li><a id="weblar-link-about" href="#">About</a></li>
+                    <li><a id="weblar-link-contact" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- fine header -->
+<!--Div immagine originale-->
+
+ <div class="container-fluid" id ="immagine-originale">
+
+
+<div class="row-fluid">
+	<div class="span2">
+		<h2>Files </h2>
+            <div id="open" class="btn btn-primary">Open</div></div>
+
+<div class="span10">
+	
+        <h2 id ="title">Original Images</h2>
+<div class="row-fluid">
+            <div id="test-scroll" class="btn btn-primary">Slide files</div></div>
+            
+       <br>
+<div class="row-fluid">
+        <div class="slider-holder">
+            <div id="slider"></div>
+        </div>
+  </div>
+	</div>
+	
+</div>
+
+<div class="row-fluid">
+	<div class="span2">
+
+        
+        <div class="box-content">
+
+	   
+            <ul id="series-selection"></ul>
+        </div>
+
+        <!-- Button for segmentation, hide div "immagine-originale" -->
+		
+        <div id="region" class="btn btn-primary" style="width: 95%">Region Selection</div>
+
+        <p></p>
+		
+        <div id="segmentation" class="btn btn-primary" style="width: 95%">Segmentation</div>
+
+        <p></p>
+
+        <div id="arr3d" class="btn btn-primary" style="width: 95%">Add to Array 3D</div>
+
+        <p></p>
+
+        <div id="make3d" class="btn btn-primary" style="width: 95%">Make 3D</div>
+       
+       <p></p>
+
+		<div id="denoquan" class="btn btn-primary" style="width: 95%">Denoise / Quantizzation</div>
+		
+		<p></p>
+
+       
+	
+	</div>
+	<div class="span10 " id ="provace">
+	
+       
+        <div id="view-area"> 
+        </div>
+    </div>
+	</div>
+	
+	<script type="text/javascript">
+	//Utility functions
+        function showDataURL(){
+            var canvas_1 = document.getElementById('maincanvas');
+            var context_1 = canvas_1.getContext('2d'); 
+            var dataURL = canvas_1.toDataURL();
+			return dataURL;
+        };
+		
+	function postwith (to,p) {
+	  var myForm = document.createElement("form");
+	  myForm.method="post" ;
+	  myForm.action = to ;
+	  var k = 'dataurl';
+		var myInput = document.createElement("input") ;
+		myInput.setAttribute("name", k) ;
+		myInput.setAttribute("value", p);
+		myForm.appendChild(myInput) ;
+	  document.body.appendChild(myForm) ;
+	  myForm.submit() ;
+	  document.body.removeChild(myForm) ;
+	};
+	
+	
+	var array3d = [];
+	
+	$("#region").click(function () {
+        $("#maincanvas").fadeOut();
+        $("#title").html("Segmented Image")
+        //funzione per segmentare
+                $("#maincanvas").fadeIn();
+				function loadCanvas(dataURL) {
+					var canvas = document.getElementById('myCanvas_1');
+					var context = canvas.getContext('2d');
+
+					// load image from data url
+					var imageObj = new Image();
+					imageObj.onload = function() {
+					  context.drawImage(this, 0, 0);
+					};
+
+					console.log(imageObj.width);
+					imageObj.src = dataURL;
+				  }
+						
+				var url = showDataURL();
+				postwith('/pace_farruggio/region_selection.php',url);
+				
+    });	
+		
+    $("#segmentation").click(function () {
+        $("#maincanvas").fadeOut();
+        $("#title").html("Segmented Image")
+        //funzione per segmentare
+                $("#maincanvas").fadeIn();
+				function loadCanvas(dataURL) {
+					var canvas = document.getElementById('myCanvas_1');
+					var context = canvas.getContext('2d');
+
+					// load image from data url
+					var imageObj = new Image();
+					imageObj.onload = function() {
+					  context.drawImage(this, 0, 0);
+					};
+
+					console.log(imageObj.width);
+					imageObj.src = dataURL;
+				  }
+						
+				var url = showDataURL();
+				postwith('/pace_farruggio/image2segment_white.php',url);
+        
+    });
+
+    $("#arr3d").click(function () {
+        $("#maincanvas").fadeOut();
+        $("#title").html("Add to Array 3D")
+        //funzione per segmentare
+				function loadCanvas(dataURL) {
+					var canvas = document.getElementById('myCanvas_1');
+					var context = canvas.getContext('2d');
+
+					// load image from data url
+					var imageObj = new Image();
+					imageObj.onload = function() {
+					  context.drawImage(this, 0, 0);
+					};
+
+					console.log(imageObj.width);
+					imageObj.src = dataURL;
+				  }
+						
+				var url = showDataURL();
+				array3d.push(url);
+				array_json = JSON.stringify(array3d);
+				console.log(array_json);
+                $("#maincanvas").fadeIn();
+    });
+	
+	$("#make3d").click(function () {
+        $("#maincanvas").fadeOut();
+        $("#title").html("Add to Array 3D")
+        //funzione per segmentare
+				
+		postwith('/pace_farruggio/model3d.php',array3d);
+        $("#maincanvas").fadeIn();
+    });
+
+	$("#denoquan").click(function () {
+        $("#maincanvas").fadeOut();
+        $("#title").html("Add to Array 3D")
+        //funzione per segmentare
+				
+		postwith('/pace_farruggio/denoise_quant.php',array3d);
+        $("#maincanvas").fadeIn();
+    });
+
+
+   
+
+    $("#open").click(function () {
+        $("#title").html("Original Image")
+});
+   
+</script>
+	
+</div>
+<!--fine div original image-->
+
+<br>
+
+   
+    
+   
+    <!-- end -->
+
+    
+</div>
+    <!-- Dialogs -->
+    <div id="open-dialog" class="hidden" title="Open files" style="display: none;">
+        <p>Select some files</p>
+        <form name="selectfile">
+            <label for="file">File</label>
+            <input type="file" name="file" id="file" multiple="multiple"/>
+        </form>
+    </div>
+    <div id="browse-dialog" class="hidden" title="Browse PACS" style="display: none;">
+      <form>
+        PACS:
+      	<div id="browse-pacs-radio">
+	</div> 
+      </form>
+	<div id="studiesaccordion">
+	</div>
+    </div>
+    <canvas id="secondary_canvas" width="512" height="512" style="display: none;"></canvas>
+    <div id="metadata-dialog" class="hidden" title="Metadata" style="display: none;">
+        <table id="metadata-table" width="100%">
+            <thead>
+                <tr>
+                    <td width="15%">Tag</td>
+                    <td width="40%">Name</td>
+                    <td width="35%">Value</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- footer -->
+    <footer class="footer">
+        <div style="float:left">
+            <input id="showConsole" type="button" value="OpenConsole" onclick="toggleConsole();" >
+        </div>
+        <div id="menu">
+            <ul class="nav">
+                <li><a href="Web-lar">Web-Lar</a></li>
+                <li><a href="Web-index">Web-Index</a></li>
+            </ul>
+        </div>
+        <div id="consl" style="display:none">  
+            <form><textarea id="code" name="code" >
+                //Write Here
+            </textarea></form>
+
+            <input id="exec" type="button" value="Exec" onclick="exec();"/>
+            <input id="coffeeScriptButton" type="button" value="CoffeeScript" onclick="coffeeMode();"/>
+            <input id="javaScriptButton" type="button" value="JavaScript" style="display:none" onclick="javascriptMode();">
+            <input id="undo" type="button" value="Undo" onclick=""/>
+            <input id="verify" type="button" value="Verify" onclick="test();"/>
+        </div>
+
+
+
+        <script>
+        /*Testing var*/
+        var csb = document.getElementById("coffeeScriptButton");
+        var jsb = document.getElementById("javaScriptButton");
+
+        /*Loading CodeMirror on existing textArea*/
+
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            mode: "javascript",
+            lineNumbers: true,
+                extraKeys: {"Cmd-Space": "autocomplete"},   //extrakey for autocomplete
+                tabMode: "indent"                           
+            });
+
+        </script>
+
+        <div id="footer" class="container"></div>
+    </footer>
+
+
+
+</body>
+</html>

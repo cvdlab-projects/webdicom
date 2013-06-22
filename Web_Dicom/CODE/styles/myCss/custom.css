@@ -1,0 +1,54 @@
+
+#footer {
+	height: 50px;
+	background-color: #3A5896;
+        text-align: center;
+	width: 1286px
+
+} 
+
+
+.preview{
+	height: 300px;
+	background-color: #B2B2B2;
+	background-repeat: no-repeat;
+}
+
+
+.navbar{
+        width: 1286px
+	color: #4b4b4b;
+}
+
+#page{
+
+	width: 620px;
+	height: 671px;
+	
+}
+
+#plasm{
+	width: 850px;
+	height: 610px;
+	
+}
+
+#original-image{
+	max-width:398px;
+	max-height:300px;
+
+}
+
+#segment-image{
+	max-height:300px;
+	max-width:398px;
+}
+
+#block-image{
+	max-height:300px;
+	max-width:398px;
+}
+
+#linkend{
+	margin-left:200px;
+}

@@ -1,0 +1,269 @@
+/*Style for Web-Visual page 
+Realised by Marco Barbieri, Cappelli Eleonora, Antonello Gatto, 
+Gianluca Parente, Giorgio Cerrito
+,Matteo Riccardi, Luigi Cristiano (il boss)*/
+
+
+
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	background: #3A5896 url(images/bg01.png) repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #4b4b4b;
+	height: 100%;
+
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: bolder;
+	color: #222222;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+p, ol, ul {
+	margin-top: 0px;
+	padding: 0px;
+}
+
+p, ol {
+	line-height: 180%;
+}
+
+strong {
+}
+
+a {
+	color: #5C5539;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+img.border {
+}
+
+img.alignleft {
+	float: left;
+	margin-top: 8px;
+	margin-right: 50px;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.aligncenter {
+	margin: 0px auto;
+}
+
+hr {
+	display: none;
+}
+
+/** WRAPPER */
+
+#wrapper {
+	overflow: auto;
+	background: #FFFFFF;
+box-shadow: 
+        inset 0px 11px 8px -20px #CCC,
+        inset 0px -11px 8px -10px #CCC;}
+
+#container {
+    min-height: 100%;
+    height: auto;
+    height: 100%;
+    margin: 0 auto -50px; 
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* Header */
+
+#header-wrapper {
+	overflow: hidden;
+	height: 40px;
+}
+
+#header {
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 310px;
+	height: 40px;
+	padding: 0px 0px 0px 40px;
+}
+
+#logo h1 {
+	padding: 5px 0px 0px 0px;
+	letter-spacing: -2px;
+	font-size: 2.6em;
+}
+
+#logo h1 a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+/* Menu */
+
+#menu {
+	float: right;
+	width: 810px;
+	height: 40px;
+	padding: 0px 10px 0px 0px;
+}
+
+#menu ul {
+	float: right;
+	margin: 0;
+	padding: 5px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	display: block;
+	margin-left: 1px;
+	padding: 7px 20px 7px 20px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #FFFFFF;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	text-decoration: none;
+	background: #DDDDDD;
+	border-radius: 5px;
+	color: #1f31bb;
+}
+
+/* Page */
+
+#page-wrapper {
+	overflow: hidden;
+	float: left;
+}
+
+#page {
+	overflow: hidden;
+	width: 900px;
+	margin: 0px auto;
+	padding: 10px 10px;
+	float: left;
+	height: 480px;
+}
+
+
+
+/** CONTENT */
+
+#wide-content {
+	padding: 50px;
+	border: 10px solid #f1f1f1;
+}
+
+#wide-content h2 {
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 36px;
+	color: #222222;
+}
+
+
+/** CONTENT */
+
+#content {
+	float: right;
+	width: 760px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content h2 {
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 36px;
+	color: #222222;
+}
+
+#content .subtitle {
+	padding: 0px 0px 30px 0px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	color: #81AFC5;
+}
+
+
+
+/* Footer */
+
+
+#space {
+	overflow: auto;
+	background: #FFFFFF;
+	height: 10px;
+	width: auto;
+}
+
+#footer-wrapper {
+	overflow: hidden;
+	clear: both;
+	margin: 10px auto;
+
+}
+
+
+#footer {
+	overflow: hidden;
+	padding:20px 0px 0px 0px;
+	text-align: center;
+	font-size: 12px;
+	color: #b0b9ff;
+}
+
+//new about
+
+#backbtn {
+	color: #000000;
+	float:left; 
+	height:48px;
+	line-height:48px;
+}
+
+#wrapper_names {
+	font-size:1.5em;
+	background: #FFFFFF;
+	height: 25em;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+
+<head> 
+<title>Web</title>
+</head> 
+<body>
+
+<link href="styles/myCss/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="styles/myCss/custom.css" rel="stylesheet" type="text/css" media="all" />
+<link href="styles/myCss/liquidcarousel.css" rel="stylesheet" type="text/css" media="all">
+<!-- script plasm -->
+<script src="support/jquery.js"></script>
+<script src="support/mustache.js"></script>
+<script src="support/numeric.js"></script>
+<script src="support/director.js"></script>
+<script src="support/three.js"></script>
+<script src="support/three-detector.js"></script>
+<script src="support/three-frame.js"></script>
+<script src="support/three-stats.js"></script>
+<script src="support/three-trackball.js"></script>
+<script src="node_modules/simplexn.js/lib/simplexn.js"></script>
+<script src="node_modules/f.js/lib/f.js"></script> 
+<script src="lib/plasm.js"></script>
+<script src="lib/plasm-fun.js"></script>
+<script src="lib/plasm-env.js"></script>
+
+
+
+  <script>
+    var p;
+    $(function () {
+      console.log('Starting PLaSM...');
+      p = new Plasm('plasm', 'plasm-inspector');
+      fun.PLASM(p);
+    });
+  </script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30496335-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = 'http://www.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <!-- fine plasm -->
+
+<script type="text/javascript" src="js/myJS/cubo.js"></script>
+<script type="text/javascript" src="js/myJS/jquery.liquidcarousel.js"></script>
+
+<!-- header -->
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Web Dicom</a>
+    <ul class="nav">
+      <li class="active"><a href="bihomed.html"><b>Home</b></a></li>
+      <li><a href="#"><b>About</b></a></li>
+      <li><a href="#"><b>Contact</b></a></li>
+    </ul>
+  </div>
+</div>
+<!-- fine header -->
+
+<!-- inizio context -->
+ <div class="container-fluid">
+ <div class="row-fluid">
+	<div class="span4">
+		<input type="file"  href="#" id="upload-image"></input>		
+	</div>
+	<div class="span4">
+		<button class="btn" id="seg-image">Segmenta</button>
+	</div>
+	<div class="span4">
+		<button class="btn" id="blo-image">Scomponi a blocchi</button>
+	</div>
+</div>
+
+<br>
+
+<div class="row-fluid">
+	<div class="span4 preview img-rounded" id="original">
+		<img id="original-image" src=""/>
+	</div>
+	<div class="span4 preview img-rounded" id="segment">
+		<img id="segment-image" src=""/>
+	</div>
+	<div class="span4 preview img-rounded" id ="block">
+		<img id="block-image" src=""/>
+	</div>
+</div>
+
+<br>
+<div id="container-liquid">
+<div id="liquid" class="liquid">
+	<span class="previous"></span>
+	<div class="wrapper">
+		<ul class="image-scroll">
+			
+		</ul>
+
+	
+	</div>
+	<span class="next"></span>
+</div>
+</div>
+
+<br>
+<hr></hr>
+<br>
+<script language=>
+function on() {
+	$("body").css("overflow","hidden");
+}
+
+function out(){
+	$("body").css("overflow","auto");
+}
+
+</script>
+    <!-- canvas plasm -->
+<div class="row-fluid">
+<div id="wrapper">
+	<div id="page-wrapper">
+		<div class="span9">
+			<div id="page">
+				<div id="plasm" width="650" height="450" onclick="on()" onMouseOut="out()"></div>
+			</div>
+		</div>
+
+	<div class="span3">
+		<div class="btn-group btn-group-vertical">
+			<div id="menu_button">
+				<ul>
+				
+				<li><button class="btn" href="#">OpenDataBase</button><li>
+				<li><button class="btn" id="cubo">FunctionCube</button><li>
+				<li><button class="btn" href="#">Function3D</button><li>
+				</ul>
+			</div>
+		</div>
+    </div>
+	</div>
+</div>
+</div>
+</div>
+<!-- fine context -->
+
+
+<!-- footer start-->
+<footer class="footer">
+
+	<div class="navbar">
+					
+	   <ul class="nav" id="linkend">
+			<li><a href="Web-lar.html"><b>Web-Lar</b></a></li>
+			<li><a href="Web-index.html"><b>Web-Index</b></a></li>
+							
+							
+	   </ul>
+	</div>
+				
+
+				<div id="footer" class="container">
+				</div>
+			</footer>
+ 
+<!-- footer end-->
+
+
+    </body>
+
+</html>
