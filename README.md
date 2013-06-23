@@ -30,7 +30,6 @@ Web DICOM project
 
  - [Presentation](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/Doc/Web_DIcom_Doc.md)
  - [How-to with Screenshots](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/HowToBio.md)
- - [Hoe-to 3D](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_Grafica/HowTo_3d.md)
 
 
 ## Website
