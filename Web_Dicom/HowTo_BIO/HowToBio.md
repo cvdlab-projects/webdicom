@@ -54,7 +54,7 @@ This guide help the user to use the web-application
 
 
 
-![image](https://github.com/cvdlab-bio/webdicom/blob/master/Web_Dicom/HowTo_BIO/img/3_bio.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/3_bio.jpg)
 
 
 
