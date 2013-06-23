@@ -123,4 +123,5 @@ jsDICOM is *GPL-licensed*.
 ![image_3](https://raw.github.com/cvdlab-cg/442999/master/progetto/seg_image/finale_1.jpg)
 - - -
 ![image_4](https://raw.github.com/cvdlab-cg/442999/master/progetto/seg_image/finale_2.jpg)
+---
 ###STEP 3. Block Decomposition
