@@ -29,7 +29,7 @@ Web DICOM project
 ## Final work
 
  - [Presentation](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/Doc/Web_DIcom_Doc.md)
- - [How-to Screenshots](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/HowToBio.md)
+ - [How-to with Screenshots](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/HowToBio.md)
 
 
 ## License
