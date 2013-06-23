@@ -1,4 +1,4 @@
-# webdicom
+# WebDICOM
 
 Web DICOM project
 
@@ -28,8 +28,8 @@ Web DICOM project
 
 ## Final work
 
- - [Presentation](http://apily.io/slidify?md=https:https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/Doc/Web_DIcom_Doc.md)
- - [How-to Screenshots](http://apily.io/slidify?md=https:https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/HowToBio.md)
+ - [Presentation](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/Doc/Web_DIcom_Doc.md)
+ - [How-to Screenshots](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/HowToBio.md)
 
 
 ## License
