@@ -87,7 +87,7 @@ jsDICOM is *GPL-licensed*.
 ##STEP 1: From jsDICOM code to DICOM image visulization 
 ######*Authors : Fabio Mastromatteo - Serena Sforza*
 
-* Analysis and comprehension of the jsDICOM original implementation's code. 
+* Analysis and comprehension of the jsDICOM original implementation's code 
 * Code lightening
 * Addition of some utility functions
 
@@ -97,6 +97,10 @@ jsDICOM is *GPL-licensed*.
 
 ---
 ###STEP 2. Segmentation
+######*Authors : Andrea Farruggio - Giovanni Pace*
+* Border Discovery
+* Edge tracker
+* Region growing for edge detection
 
 - - -
 ## Border Discovery
