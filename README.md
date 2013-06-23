@@ -26,10 +26,10 @@ Web DICOM project
  - [Valerio Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Valerio_Cestarelli)
  - [Roberta Romano](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-04-18_Roberta_Romano)
 
-## First Checkpoint
+## Final work
 
- - [Romano-Cestarelli](http://apily.io/slidify?md=https://raw.github.com/cvdlab-bio/webdicom/master/slides/2013-05-09_Roberta_Romano_Valerio_Cestarelli.md)
-
+ - [Presentation](http://apily.io/slidify?md=https:https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/Doc/Web_DIcom_Doc.md)
+ - [How-to Screenshots](http://apily.io/slidify?md=https:https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/HowToBio.md)
 
 
 ## License
