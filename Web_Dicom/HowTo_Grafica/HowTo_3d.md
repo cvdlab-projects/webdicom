@@ -5,30 +5,33 @@
 ##HowTo_3d:
 
 ###### The application need a server (es. Apache) to run. The easiest way to use the app is:
--  download and install xampp 
--  put code in xampp/htdocs/
--  run xampp controll and start apache
--  from browser (firefox) 127.0.0.1
+
+-  Connect to http://www.dicom-standard.it/
+-  Alternatively, download the code from the code folder
+-  Download and install xampp 
+-  Put code in xampp/htdocs/
+-  Run xampp controll and start apache
+-  From browser (firefox) 127.0.0.1
 
  - - -
 
 
 ### The application aims to
 
-####Build 3d models from a stack of images dicom
+#### Build 3d models from a stack of images dicom
 
 
 - - -
 
-####Load Stack of image
+####Load Stack of image:
 
-### Upload and view stack of images dicom :
+### Upload and view stack of dicom images  :
 
 ####- This is the index page of the project
 
 ####- From this page, using the botton "Open" you can load one or more image dicom.
 
-#### - The slide_files botton is usefull for show all image that you load
+#### - The "slide_files" botton is usefull for show all images that you load
 
 #### - The scroll bar gives you the possibility to choose between the images loaded
 
@@ -45,7 +48,7 @@
 
 #### - After push image in the array you may run some filter on image by pushing "Denoise/Quantizzation" botton
 
-#### - Loaded image has already been applied a blue filter
+#### - Loaded image has already been applied a "fast blur" filter
 
 #### - You can choose the level of color quantizzation using the scrooll bar
 
