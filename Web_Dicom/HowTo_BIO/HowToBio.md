@@ -33,7 +33,7 @@ This guide help the user to use the web-application
 
 
 
-![image](img/1_bio.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/1_bio.jpg)
 
 
 
@@ -43,7 +43,7 @@ This guide help the user to use the web-application
 
  
 
-![image](img/2_bio.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/2_bio.jpg)
 
 - - - 
 
@@ -54,7 +54,7 @@ This guide help the user to use the web-application
 
 
 
-![image](img/3_bio.jpg)
+![image](https://github.com/cvdlab-bio/webdicom/blob/master/Web_Dicom/HowTo_BIO/img/3_bio.jpg)
 
 
 
@@ -66,13 +66,13 @@ This guide help the user to use the web-application
 #### - An example is given by the two underlying images that represent the same image at different densities
 
 
-![image](img/4_load_img_1.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/4_load_img_1.jpg)
 
 
 
 
 
-![image](img/5_load_img_2.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/5_load_img_2.jpg)
 
 - - -
 
@@ -84,7 +84,7 @@ This guide help the user to use the web-application
 
 
 
-![image](img/7_region_screen_1.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/7_region_screen_1.jpg)
 
 - - -
 #### - Using the scrool bar you can choose the border approximation of the segmentation
@@ -99,7 +99,7 @@ This guide help the user to use the web-application
 #### - At the end of this process with the "Send to Segmenter" botton you can load the segmenter page
 
 
-![image](img/6_region_screen.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/6_region_screen.jpg)
 
 - - -
 
@@ -110,14 +110,14 @@ This guide help the user to use the web-application
 #### - Using the scrool bar you can choose the square width of the algorithm 
 
 
-![image](img/7_segmenter_screen_2.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/7_segmenter_screen_2.jpg)
 
 
 - - -
 
 #### - The segment from the image are displayed in a new canvas 
 
-![image](img/7_segmenter_screen_1.jpg)
+![image](https://raw.github.com/cvdlab-bio/webdicom/master/Web_Dicom/HowTo_BIO/img/7_segmenter_screen_1.jpg)
 
 
 
