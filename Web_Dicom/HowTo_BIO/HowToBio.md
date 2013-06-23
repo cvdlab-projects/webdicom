@@ -6,17 +6,20 @@
 ##HowTo:
 
 ###### The application need a server (es. Apache) to run. The easiest way to use the app is:
--  download and install xampp 
--  put code in xampp/htdocs/
--  run xampp controll and start apache
--  from browser (firefox) 127.0.0.1
+
+-  Connect to [http://www.dicom-standard.it/]
+-  Alternatively, download the code from the code folder
+-  Download and install xampp 
+-  Put code in xampp/htdocs/
+-  Run xampp controll and start apache
+-  From browser (advised firefox) 127.0.0.1
 
 ### The application aims to
-1. Upload and view stack of images dicom  
-2. Manipulate images dicom
+1. Upload and view stack of dicom images  
+2. Manipulate dicom images 
 3. Extraction of areas of interest
 4. Geometric simplification of the areas of interest
-5. Build 3d models from a stack of images dicom
+5. Build 3d models from a stack of dicom images 
 
 This guide help the user to use the web-application
 
@@ -29,7 +32,7 @@ This guide help the user to use the web-application
 
 ####- This is the index page of the project
 
-####- From this page, using the botton open you can load one or more image dicom.
+####- From this page, using the botton "open" you can load one or more dicom images .
 
 
 
@@ -37,7 +40,7 @@ This guide help the user to use the web-application
 
 
 
-#### - The slide_files botton is usefull for show all image that you load
+#### - The "slide_files" botton is usefull for show all images that you load
 
 #### - The scroll bar gives you the possibility to choose between the images loaded
 
@@ -106,7 +109,7 @@ This guide help the user to use the web-application
 ### Geometric simplification of the areas of interest:
 
 
-#### - The algorithm use a square that navigate the image to finf edge
+#### - The algorithm use a square that navigate the image to find edge
 #### - Using the scrool bar you can choose the square width of the algorithm 
 
 
